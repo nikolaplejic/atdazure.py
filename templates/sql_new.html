@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Azure Linux Demo - SQL Database{% endblock %}
+
+{% block content %}
+<h2>SQL Database</h2>
+
+<form action="/sql/new" method="post" role="form">
+  <div class="form-group">
+    <label for="product_name">Product Name</label>
+    <input type="text" class="form-control" name="product_name" id="product_name" maxwidth="255" />
+  </div>
+  <div class="form-group">
+    <label for="product_description">Product Description</label>
+    <input type="text" class="form-control" name="product_description" id="product_description" maxwidth="255" />
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" class="form-control" name="price" id="price" maxwidth="255" />
+  </div>
+  <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Add" />
+</form>
+{% endblock %}

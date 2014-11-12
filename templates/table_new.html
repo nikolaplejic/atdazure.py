@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Azure Linux Demo - Table Storage{% endblock %}
+
+{% block content %}
+<h2>Table Storage</h2>
+
+<form action="/table/new" method="post" role="form" class="form-inline">
+  <input type="text" class="form-control" name="data" id="data" maxwidth="255" />
+  <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Add" />
+</form>
+{% endblock %}

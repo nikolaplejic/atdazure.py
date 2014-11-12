@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Azure Linux Demo - Table Storage{% endblock %}
+
+{% block content %}
+<h2>Table Storage</h2>
+
+<p>
+<dl>
+  <dt>RowKey</dt>
+  <dd>{{ entity.RowKey }}</dd>
+  <dt>PartitionKey</dt>
+  <dd>{{ entity.PartitionKey }}</dd>
+  <dt>data</dt>
+  <dd>{{ entity.data }}</dd>
+</dl>
+</p>
+{% endblock %}

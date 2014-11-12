@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Azure Linux Demo - Redis Cache{% endblock %}
+
+{% block content %}
+<h2>Cache</h2>
+
+<p>
+  <a class="btn btn-primary" href="/cache/set">Set Cache Item</a>
+  <a class="btn btn-primary" href="/cache/del">Invalidate Cache</a>
+</p>
+
+<p>
+{% if e %}
+Cache Hit: {{ e }}
+{% else %}
+Cache Miss
+{% endif %}
+</p>
+{% endblock %}

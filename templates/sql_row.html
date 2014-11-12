@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Azure Linux Demo - SQL Database{% endblock %}
+
+{% block content %}
+<h2>SQL Database</h2>
+
+<p>
+<dl>
+  <dt>ProductID</dt>
+  <dd>{{ row.ProductID }}</dd>
+  <dt>ProductName</dt>
+  <dd>{{ row.ProductName }}</dd>
+  <dt>ProductDescription</dt>
+  <dd>{{ row.ProductDescription }}</dd>
+  <dt>Price</dt>
+  <dd>{{ row.Price }}</dd>
+</dl>
+</p>
+{% endblock %}
