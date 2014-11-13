@@ -1,15 +1,20 @@
 table_storage = {
-    'account_name': '',
+    'account_name': 'portalvhdslk60v8b1g4wjq',
     'account_key': ''
 }
 
 sql = {
-    'server': 'CHANGEME.database.windows.net',
-    'uid': '',
+    'server': 'hkli8z1g7e.database.windows.net',
+    'uid': 'azureuser@hkli8z1g7e',
     'pwd': ''
 }
 
 redis = {
-    'host': 'CHANGEME.redis.cache.windows.net',
+    'host': 'atdheresy.redis.cache.windows.net',
     'auth': ''
+}
+
+servicebus = {
+    'name': 'RootManageSharedAccessKey',
+    'key': ''
 }
