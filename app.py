@@ -2,8 +2,12 @@ import azurecfg
 import azuredb
 import azurecache
 import azuretable
+import azurequeue
+
+from azure.servicebus import Message
 
 import uuid
+import datetime
 from flask import Flask, render_template, redirect, request, url_for
 from sqlalchemy.sql import select
 
@@ -84,6 +88,20 @@ def cache_set():
 def cache_del():
     azurecache.r.delete('a_key')
     return redirect(url_for('cache_handler'))
+
+# Service Bus ------------------------------------------------------------------
+
+@app.route('/sb')
+def sb_handler():
+    msg = azurequeue.bus_service.receive_queue_message('atd', peek_lock=False,
+                                                       timeout=1)
+    return render_template('sb_home.html', msg=msg)
+
+@app.route('/sb/send')
+def sb_send_handler():
+    msg = Message(b'Hello, World! ' + str(datetime.datetime.now()))
+    azurequeue.bus_service.send_queue_message('atd', msg)
+    return redirect(url_for('sb_handler'))
 
 # ------------------------------------------------------------------------------
 
