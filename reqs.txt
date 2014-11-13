@@ -8,4 +8,5 @@ azure==0.8.4
 ipython==2.3.0
 itsdangerous==0.24
 pyodbc==3.0.7
+redis==2.10.3
 wsgiref==0.1.2
